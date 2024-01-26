@@ -30,3 +30,7 @@ class CompanyAdmin(admin.ModelAdmin):
 @admin.register(models.ConditionType)
 class ConditionTypeAdmin(admin.ModelAdmin):
     ...
+
+@admin.register(models.Interview)
+class InterviewAdmin(admin.ModelAdmin):
+    list_display = ["id", "from_vacancy", "datetime", "interview_type"]

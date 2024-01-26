@@ -58,7 +58,9 @@ class Interview(models.Model):
     datetime = models.DateTimeField(auto_now=False, auto_now_add=False)
     interview_type = models.CharField(max_length=50, choices=INTERVIEW_TYPE)
 
-
+    def __str__(self):
+        return f"{self.from_vacancy.pk} {self.datetime} {self.interview_type}"
+    
 class ConditionType(models.Model):
     name = models.CharField(max_length=50)
 
